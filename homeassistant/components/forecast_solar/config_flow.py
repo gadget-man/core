@@ -129,7 +129,7 @@ class ForecastSolarOptionFlowHandler(OptionsFlow):
                     vol.Optional(
                         CONF_DAMPING,
                         default=self.config_entry.options.get(CONF_DAMPING, 0.0),
-                    ): vol.Coerce(float),
+                    ): vol.Match(r'/\d*\.?\d+[,]?\d*\.?\d+?/'),
                     vol.Optional(
                         CONF_INVERTER_SIZE,
                         description={
